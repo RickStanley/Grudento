@@ -1,0 +1,9 @@
+:root {
+  --color-bg: hsl(0, 0%, 13%);
+  --color-bg-note: hsl(0, 0%, 25%);
+  --color-bg-input: hsl(0, 0%, 18%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-bg-tooltip: hsl(0, 0%, 18%);
+  --color-bg-action: hsl(0, 0%, 13%);
+  --color-hover-action: hsl(0, 0%, 10%);
+}

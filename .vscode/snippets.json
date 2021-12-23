@@ -1,0 +1,7 @@
+{
+  "html": {
+    "snippets": {
+      "g-note": "<g-note>${0}</g-note>"
+    }
+  }
+}

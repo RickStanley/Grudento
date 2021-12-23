@@ -1,0 +1,11 @@
+{
+  "html.customData": [
+    "./.vscode/html.html-data.json"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "emmet.extensionsPath": ["/mnt/spare/dev/web/grudento/.vscode/snippets.json"],
+  "eslint.format.enable": true
+}

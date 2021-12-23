@@ -1,0 +1,123 @@
+:root {
+  --size-padding-horizontal: 1em;
+}
+
+/* #region High level overrides*/
+
+input {
+  background-color: var(--color-bg-input);
+  color: inherit;
+  font-size: calc(20 / 16 * 1em);
+  padding: calc(5 / 16 * 1em) calc(10 / 20 * 1em);
+  border: calc(1 / 20 * 1em) solid gray;
+  border-radius: var(--border-radius);
+  padding-right: calc(40 / 16 * 1em);
+  max-width: 100%;
+}
+
+/* #endregion High level overrides*/
+
+/* #region Search*/
+.header {
+  min-height: calc(70 / 16 * 1em);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 var(--size-padding-horizontal);
+  flex-wrap: wrap;
+  gap: 1em;
+  background-color: inherit;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.search-form {
+  --border-radius: calc(3 / 20 * 1em);
+  position: relative;
+  max-width: 100%;
+}
+
+.search-form__submit {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-15%, -50%);
+}
+/* #endregion Search*/
+
+/* #region Notes*/
+.notes {
+  --size-height-header: calc(38 / 16 * 1em);
+}
+
+.notes__list {
+  padding: 0 var(--size-padding-horizontal);
+  list-style: none;
+  margin: 0;
+}
+
+.notes__list__item {
+  margin-bottom: 1em;
+}
+
+.note__header {
+  padding: 0 var(--size-padding-horizontal);
+  display: flex;
+  align-items: center;
+  height: var(--size-height-header);
+}
+
+.note__link {
+  --offset-top: calc(var(--size-height-ribbon) + var(--size-height-header));
+  position: absolute;
+  height: calc(100% - var(--offset-top));
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  top: var(--offset-top);
+}
+
+.notes__note {
+  --size-padding-horizontal: 1.25em;
+}
+
+.header__created {
+  margin: 0;
+  font-size: calc(12 / 16 * 1em);
+}
+
+.header__actions {
+  position: relative;
+  margin-left: auto;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.actions__list {
+  position: absolute;
+  right: calc(100% + 0.5em);
+  top: -50%;
+  z-index: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0.5em;
+  background-color: var(--color-bg-tooltip);
+  border: calc(2 / 16 * 1em) solid var(--color-bg);
+  border-radius: calc(5 / 16 * 1em);
+}
+
+.actions__list[aria-hidden] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.item__action {
+  padding: 0.5em;
+}
+
+/* #endregion Notes*/
