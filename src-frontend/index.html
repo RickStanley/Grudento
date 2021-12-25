@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-gb">
 
 <head>
   <meta charset="UTF-8">
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <h1 class="visually-hidden">
       Grudento
@@ -31,62 +32,16 @@
     </form>
     <button class="header__button button--action" aria-label="Add note" type="button">⚙</button>
   </header>
+
   <main class="notes">
     <h2 class="visually-hidden">
       Notes
     </h2>
-    <ul class="notes__list">
-      <li class="notes__list__item">
-        <g-note class="notes__note" preview>
-          <header slot="header" class="note__header">
-            <p class="header__created"><span class="visually-hidden">Last updated at</span> <time>Di, 21. Dez 22:00</time></p>
-            <div role="region" aria-labelledby="note-1-actions-label" class="header__actions">
-              <p id="note-1-actions-label" class="visually-hidden">Note actions</p>
-              <button data-action="toggle:menu" aria-expanded="false" aria-haspopup="menu" aria-controls="note-1-actions-list" class="actions__expand button--action" type="button">⁝</button>
-              <menu id="note-1-actions-list" aria-hidden="true" class="actions__list">
-                <li><button class="item__action" type="button">Delete</button></li>
-              </menu>
-            </div>
-          </header>
-          <a data-action="open:note" class="note__link" href="#" slot="link-shield"><span class="visually-hidden">Open this note</span></a>
-# My title
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, atque nihil quidem voluptates quaerat nisi iste voluptatibus et? Possimus cupiditate ducimus nulla nesciunt aliquam dolorem, eaque expedita enim repellendus recusandae?
-
-Fugit, itaque id rerum consectetur minus suscipit sapiente maxime animi iure similique autem vitae esse adipisci nihil ratione temporibus commodi voluptatem eligendi, debitis fugiat. Illo quidem iure numquam magnam labore!
-Saepe sed veniam praesentium labore quaerat eum nesciunt expedita libero consequatur ab voluptas quasi nobis placeat eius, recusandae est numquam explicabo aperiam. Eos, perferendis necessitatibus? Officia id asperiores modi corporis.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quidem accusamus obcaecati nobis vero eius qui asperiores ratione rem cupiditate excepturi porro, voluptates mollitia fugit. Magnam accusamus fugit placeat ab.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nemo totam porro autem fugit repellendus est incidunt, ex enim maxime maiores voluptate error dignissimos possimus odio saepe. Quam, tempora vel!
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nemo totam porro autem fugit repellendus est incidunt, ex enim maxime maiores voluptate error dignissimos possimus odio saepe. Quam, tempora vel!
-        </g-note>
-      </li>
-      <li class="notes__list__item">
-        <g-note class="notes__note" preview>
-          <header slot="header" class="note__header">
-            <p class="header__created"><span class="visually-hidden">Last updated at</span> <time>Di, 21. Dez 22:00</time></p>
-            <div role="region" aria-labelledby="note-2-actions-label" class="header__actions">
-              <p id="note-2-actions-label" class="visually-hidden">Note actions</p>
-              <button data-action="toggle:menu" aria-expanded="false" aria-haspopup="menu" aria-controls="note-2-actions-list" class="actions__expand button--action" type="button">⁝</button>
-              <menu id="note-2-actions-list" aria-hidden="true" class="actions__list">
-                <li><button class="item__action" type="button">Delete</button></li>
-              </menu>
-            </div>
-          </header>
-          <a data-action="open:note" class="note__link" href="#" slot="link-shield"><span class="visually-hidden">Open this note</span></a>
-# My title
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, atque nihil quidem voluptates quaerat nisi iste voluptatibus et? Possimus cupiditate ducimus nulla nesciunt aliquam dolorem, eaque expedita enim repellendus recusandae?
-
-Fugit, itaque id rerum consectetur minus suscipit sapiente maxime animi iure similique autem vitae esse adipisci nihil ratione temporibus commodi voluptatem eligendi, debitis fugiat. Illo quidem iure numquam magnam labore!
-Saepe sed veniam praesentium labore quaerat eum nesciunt expedita libero consequatur ab voluptas quasi nobis placeat eius, recusandae est numquam explicabo aperiam. Eos, perferendis necessitatibus? Officia id asperiores modi corporis.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quidem accusamus obcaecati nobis vero eius qui asperiores ratione rem cupiditate excepturi porro, voluptates mollitia fugit. Magnam accusamus fugit placeat ab.
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nemo totam porro autem fugit repellendus est incidunt, ex enim maxime maiores voluptate error dignissimos possimus odio saepe. Quam, tempora vel!
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nemo totam porro autem fugit repellendus est incidunt, ex enim maxime maiores voluptate error dignissimos possimus odio saepe. Quam, tempora vel!
-        </g-note>
-      </li>
-    </ul>
+    <ul class="notes__list"></ul>
   </main>
+
   <script type="module" src="./ts/home.ts"></script>
+
   <svg hidden fill="none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="search-icon" viewBox="0 0 24 24">
       <path

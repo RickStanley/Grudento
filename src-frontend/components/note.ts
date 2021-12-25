@@ -3,7 +3,7 @@ import { CustomElement } from './customElement';
 
 class Note extends HTMLElement implements CustomElement {
   static elementName: string = 'g-note';
-  static css = new URL('../styles/note.css', import.meta.url).href;
+  static css = new URL('../styles/note-editor.css', import.meta.url).href;
 
   isPreview: boolean = false;
   createdAt: string = '';

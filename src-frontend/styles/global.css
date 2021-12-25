@@ -13,17 +13,18 @@
 html {
   box-sizing: border-box;
   color-scheme: light dark;
+  background-color: var(--color-bg);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
   color: var(--color-text);
 }
 
 button {
   padding: 0;
+  margin: 0 ;
   font-size: inherit;
   font-family: inherit;
 }
@@ -139,6 +140,11 @@ a:active {
   --size-height-max: calc(28 / 24 * 1em);
   line-height: 0;
   box-sizing: content-box;
+}
+
+.button--action[data-action^=toggle][active] {
+  background-color: highlight;
+  color: var(--color-bg);
 }
 
 .button--action .icon {

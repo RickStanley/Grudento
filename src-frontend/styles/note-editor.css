@@ -1,0 +1,602 @@
+:host {
+  /* #region WYSIWYG variables (Milkdown specific)*/
+  --shadow: 59, 66, 82;
+  --primary: 94, 129, 172;
+  --secondary: 129, 161, 193;
+  --neutral: 236, 239, 244;
+  --solid: 216, 222, 233;
+  --line: 67, 76, 94;
+  --background: 37, 41, 50;
+  --surface: 46, 52, 64;
+  --typography: Roboto, HelveticaNeue-Light, Helvetica Neue Light,
+    Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  --code: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  --radius: 4px;
+  --lineWidth: 1px;
+  /* #endregion WYSIWYG variables (Milkdown specific)*/
+
+  --size-height-ribbon: calc(4 / 16 * 1em);
+  --color-ribbon-note-default: dodgerblue;
+
+  background-color: var(--color-bg-note);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* :host([preview]) .note-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+} */
+
+.note-content {
+  overflow: auto;
+}
+
+:host([preview]) .note-content {
+  max-height: calc(220 / 16 * 1em);
+  overflow: hidden;
+  overflow: clip;
+}
+
+.ribbon {
+  height: var(--size-height-ribbon);
+  background-color: var(
+    --color-ribbon-note,
+    var(--color-ribbon-note-default)
+  );
+}
+
+.note-content {
+  flex: 1;
+}
+
+.css-ii7n7p .ProseMirror {
+  position: relative;
+}
+
+.css-ii7n7p .ProseMirror {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0;
+}
+
+.css-ii7n7p .ProseMirror pre {
+  white-space: pre-wrap;
+}
+
+.css-ii7n7p .ProseMirror li {
+  position: relative;
+}
+
+.css-ii7n7p .ProseMirror-hideselection *::selection {
+  background: transparent;
+}
+
+.css-ii7n7p .ProseMirror-hideselection *::-moz-selection {
+  background: transparent;
+}
+
+.css-ii7n7p .ProseMirror-hideselection {
+  caret-color: transparent;
+}
+
+.css-ii7n7p .ProseMirror-selectednode {
+  outline: 2px solid #8cf;
+}
+
+.css-ii7n7p li.ProseMirror-selectednode {
+  outline: none;
+}
+
+.css-ii7n7p li.ProseMirror-selectednode:after {
+  content: '';
+  position: absolute;
+  left: -32px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+  border: 2px solid #8cf;
+  pointer-events: none;
+}
+
+.css-1qpchmj {
+  box-shadow: 0px var(--lineWidth) var(--lineWidth) rgba(var(--shadow), 0.14),
+    0px 2px var(--lineWidth) rgba(var(--shadow), 0.12),
+    0px var(--lineWidth) 3px rgba(var(--shadow), 0.2);
+}
+
+.css-1fj0nve {
+  border: var(--lineWidth) solid rgba(var(--line), 1);
+}
+
+.css-qsshnd .milkdown {
+  color: rgba(var(--neutral), 0.87);
+  background: rgba(var(--surface), 0);
+  position: relative;
+  font-family: var(--typography);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px var(--lineWidth) var(--lineWidth) rgba(var(--shadow), 0.14),
+    0px 2px var(--lineWidth) rgba(var(--shadow), 0.12),
+    0px var(--lineWidth) 3px rgba(var(--shadow), 0.2);
+  box-sizing: border-box;
+}
+
+.css-qsshnd .milkdown .editor {
+  padding: 3.125rem 1.25rem;
+  outline: none;
+}
+
+.css-qsshnd .milkdown .editor > * {
+  margin: 1.875rem 0;
+}
+
+@media only screen and (min-width: 72rem) {
+  .css-qsshnd .milkdown .editor {
+    max-width: 57.375rem;
+    padding: 3.125rem 7.25rem;
+  }
+}
+
+.css-qsshnd .milkdown .ProseMirror-selectednode {
+  outline: var(--lineWidth) solid rgba(var(--line), 1);
+}
+
+.css-qsshnd .milkdown li.ProseMirror-selectednode {
+  outline: none;
+}
+
+.css-qsshnd .milkdown li.ProseMirror-selectednode::after {
+  border: var(--lineWidth) solid rgba(var(--line), 1);
+}
+
+.css-qsshnd .milkdown ::selection {
+  background: rgba(var(--secondary), 0.38);
+}
+
+.ProseMirror {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0;
+  position: relative;
+}
+
+.ProseMirror.editor > :first-child {
+  margin-top: 0;
+}
+
+.ProseMirror.editor > :last-child {
+  margin-bottom: 0;
+}
+
+.ProseMirror pre {
+  white-space: pre-wrap;
+}
+
+.ProseMirror li {
+  position: relative;
+}
+
+.ProseMirror-hideselection *::selection {
+  background: transparent;
+}
+
+.ProseMirror-hideselection *::-moz-selection {
+  background: transparent;
+}
+
+.ProseMirror-hideselection {
+  caret-color: transparent;
+}
+
+.ProseMirror-selectednode {
+  outline: 2px solid #8cf;
+}
+
+li.ProseMirror-selectednode {
+  outline: none;
+}
+
+li.ProseMirror-selectednode:after {
+  content: '';
+  position: absolute;
+  left: -32px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+  border: 2px solid #8cf;
+  pointer-events: none;
+}
+
+.milkdown {
+  color: rgba(var(--neutral), 0.87);
+  background: rgba(var(--surface), 0);
+  position: relative;
+  font-family: var(--typography);
+  margin-left: auto;
+  margin-right: auto;
+  /* box-shadow: 0px var(--lineWidth) var(--lineWidth) rgba(var(--shadow), 0.14),
+    0px 2px var(--lineWidth) rgba(var(--shadow), 0.12),
+    0px var(--lineWidth) 3px rgba(var(--shadow), 0.2); */
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.milkdown .editor {
+  padding: var(--size-padding-vertical, 1.25rem) var(--size-padding-horizontal, 1.25rem);
+  outline: none;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.milkdown .editor > * {
+  margin: 1.875rem 0;
+}
+
+.milkdown .ProseMirror-selectednode {
+  outline: var(--lineWidth) solid rgba(var(--line), 1);
+}
+
+.milkdown li.ProseMirror-selectednode {
+  outline: none;
+}
+
+.milkdown li.ProseMirror-selectednode::after {
+  border: var(--lineWidth) solid rgba(var(--line), 1);
+}
+
+.milkdown ::selection {
+  background: rgba(var(--secondary), 0.38);
+}
+
+.css-5p70de {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.css-h3jc6 {
+  padding-left: 1.875rem;
+  line-height: 1.75rem;
+  border-left: 4px solid rgba(var(--primary), 1);
+}
+
+.css-h3jc6 * {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.css-1k1q8e0 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--secondary), 0.38) rgba(var(--secondary), 0.12);
+  -webkit-overflow-scrolling: touch;
+}
+
+.css-1k1q8e0::-webkit-scrollbar {
+  width: 4px;
+  padding: 0 2px;
+  background: rgba(var(--surface), 1);
+}
+
+.css-1k1q8e0::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: rgba(var(--secondary), 0.12);
+}
+
+.css-1k1q8e0::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(var(--secondary), 0.38);
+}
+
+.css-1k1q8e0::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--secondary), 1);
+}
+
+.css-1b448i2 {
+  background-color: rgba(var(--background), 1);
+  color: rgba(var(--neutral), 1);
+  font-size: 0.85rem;
+  padding: 1.2rem 0.4rem 1.4rem;
+  border-radius: var(--radius);
+  font-family: var(--typography);
+}
+
+.css-1b448i2 * {
+  margin: 0;
+}
+
+.css-1b448i2 .code-fence_select-wrapper {
+  position: relative;
+}
+
+.css-1b448i2 .code-fence_value {
+  width: 10.25rem;
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  margin: 0 1.2rem 1.2rem;
+  border: var(--lineWidth) solid rgba(var(--line), 1);
+  box-shadow: 0px var(--lineWidth) var(--lineWidth) rgba(var(--shadow), 0.14),
+    0px 2px var(--lineWidth) rgba(var(--shadow), 0.12),
+    0px var(--lineWidth) 3px rgba(var(--shadow), 0.2);
+  cursor: pointer;
+  background-color: rgba(var(--surface), 1);
+  position: relative;
+  display: flex;
+  color: rgba(var(--neutral), 0.87);
+  letter-spacing: 0.5px;
+  height: 2.625rem;
+  align-items: center;
+}
+
+.css-1b448i2 .code-fence_value > *:last-child {
+  width: 2.625rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(var(--solid), 0.87);
+  border-left: var(--lineWidth) solid rgba(var(--line), 1);
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.css-1b448i2 .code-fence_value > *:last-child:hover {
+  background: rgba(var(--background), 1);
+  color: rgba(var(--primary), 1);
+}
+
+.css-1b448i2 .code-fence_value > span:first-child {
+  padding-left: 1rem;
+  flex: 1;
+  font-weight: 500;
+}
+
+.css-1b448i2 .code-fence_select-option {
+  list-style: none;
+  line-height: 2rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.css-1b448i2 .code-fence_select-option:hover {
+  background: rgba(var(--secondary), 0.12);
+  color: rgba(var(--primary), 1);
+}
+
+.css-1b448i2 .code-fence_select {
+  font-weight: 500;
+  position: absolute;
+  z-index: 1;
+  top: 2.625rem;
+  box-sizing: border-box;
+  left: 1.2rem;
+  padding: 0.5rem 0;
+  max-height: 16.75rem;
+  width: 10.25rem;
+  border: var(--lineWidth) solid rgba(var(--line), 1);
+  box-shadow: 0px var(--lineWidth) var(--lineWidth) rgba(var(--shadow), 0.14),
+    0px 2px var(--lineWidth) rgba(var(--shadow), 0.12),
+    0px var(--lineWidth) 3px rgba(var(--shadow), 0.2);
+  background-color: rgba(var(--surface), 1);
+  border-top: none;
+  overflow-y: auto;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--secondary), 0.38) rgba(var(--secondary), 0.12);
+  -webkit-overflow-scrolling: touch;
+}
+
+.css-1b448i2 .code-fence_select[data-fold='true'] {
+  display: none;
+}
+
+.css-1b448i2 .code-fence_select::-webkit-scrollbar {
+  width: 4px;
+  padding: 0 2px;
+  background: rgba(var(--surface), 1);
+}
+
+.css-1b448i2 .code-fence_select::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: rgba(var(--secondary), 0.12);
+}
+
+.css-1b448i2 .code-fence_select::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(var(--secondary), 0.38);
+}
+
+.css-1b448i2 .code-fence_select::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--secondary), 1);
+}
+
+.css-1b448i2 code {
+  line-height: 1.5;
+  font-family: var(--code);
+}
+
+.css-1b448i2 pre {
+  font-family: var(--code);
+  margin: 0 1.2rem !important;
+}
+
+.css-5jx3nu,
+.css-5jx3nu > * {
+  margin: 0.5rem 0;
+}
+
+.css-5jx3nu::marker,
+.css-5jx3nu li::marker {
+  color: rgba(var(--primary), 1);
+}
+
+.css-l37jva {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.css-156ddgn {
+  font-size: 2.125rem;
+  line-height: 2.25rem;
+}
+
+.css-28b3fv {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.css-x2e2sd {
+  height: var(--lineWidth);
+  background-color: rgba(var(--line), 1);
+  border-width: 0;
+}
+
+.css-1bmlg15 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 0;
+  vertical-align: text-bottom;
+  line-height: 1;
+}
+
+.css-1bmlg15.ProseMirror-selectednode::after {
+  content: '';
+  background: rgba(var(--secondary), 0.38);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.css-1bmlg15 img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 2px;
+}
+
+.css-1bmlg15 .icon,
+.css-1bmlg15 .placeholder {
+  display: none;
+}
+
+.css-1bmlg15.system {
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  height: 3rem;
+  background-color: rgba(var(--background), 1);
+  border-radius: var(--radius);
+  display: inline-flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.css-1bmlg15.system img {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.css-1bmlg15.system .icon,
+.css-1bmlg15.system .placeholder {
+  display: inline;
+}
+
+.css-1bmlg15.system .placeholder {
+  margin: 0;
+  line-height: 1;
+}
+
+.css-1bmlg15.system .placeholder::before {
+  content: '';
+  font-size: 0.875rem;
+  color: rgba(var(--neutral), 0.6);
+}
+
+/* .css-1bmlg15.loading {
+}
+
+.css-1bmlg15.loading .placeholder {
+} */
+
+.css-1bmlg15.loading .placeholder::before {
+  content: 'Loading...';
+}
+
+/* .css-1bmlg15.empty {
+}
+
+.css-1bmlg15.empty .placeholder {
+} */
+
+.css-1bmlg15.empty .placeholder::before {
+  content: 'Add an Image';
+}
+
+/* .css-1bmlg15.failed {
+}
+
+.css-1bmlg15.failed .placeholder {
+} */
+
+.css-1bmlg15.failed .placeholder::before {
+  content: 'Image loads failed';
+}
+
+.css-lwjx6a {
+  display: inline-block;
+  margin: 0 auto;
+  object-fit: contain;
+  width: 100%;
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+
+.css-1nj9fh6 {
+  background-color: rgba(var(--neutral), 1);
+  color: rgba(var(--background), 1);
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-family: var(--code);
+  padding: 0 0.2rem;
+}
+
+.css-15pra5r {
+  font-weight: 600;
+}
+
+.css-1vj2oy3 {
+  color: rgba(var(--secondary), 1);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-weight: 500;
+}
+
+.css-1vj2oy3:hover {
+  background-color: rgba(var(--line), 1);
+  box-shadow: 0 0.2rem rgba(var(--line), 1), 0 -0.2rem rgba(var(--line), 1);
+}
+
+.css-m1xmo0 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin: 2.5rem 0;
+  font-weight: 400;
+}

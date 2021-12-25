@@ -82,6 +82,7 @@ input {
 
 .notes__note {
   --size-padding-horizontal: 1.25em;
+  --size-padding-vertical: 0;
 }
 
 .header__created {
